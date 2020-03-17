@@ -8,6 +8,6 @@ public interface IMedecinService {
 	public List<Medecin> getMedecins();
 	public int createMedecin(Medecin medecin);
 	public Medecin getMedecin(long idMedecin);
-	public int deleteMedecin(long idMedecin);
+	public Boolean deleteMedecin(long idMedecin);
 	
 }

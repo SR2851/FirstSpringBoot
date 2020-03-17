@@ -4,13 +4,18 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import fr.formation.model.Hopital;
 import fr.formation.repository.IHopitalRepository;
-
+@Service
 public class HopitalService implements IHopitalService{
 	@Autowired
 	IHopitalRepository hopitalRepository;
+
+	public void setHopitalRepository(IHopitalRepository hopitalRepository) {
+		this.hopitalRepository = hopitalRepository;
+	}
 
 	@Override
 	public List<Hopital> getHopitals() {

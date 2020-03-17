@@ -4,10 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import fr.formation.model.Patient;
 import fr.formation.repository.IPatientRepository;
-
+@Service
 public class PatientService implements IPatientService {
 @Autowired
 	IPatientRepository patientRepository;
@@ -32,9 +33,15 @@ public class PatientService implements IPatientService {
 	}
 
 	@Override
-	public int deletePatient(long idPatient) {
-		patientRepository.deleteById(idPatient);
-		return 1;
+	public Boolean deletePatient(long idPatient) {
+		try {
+			patientRepository.deleteById(idPatient);
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	
