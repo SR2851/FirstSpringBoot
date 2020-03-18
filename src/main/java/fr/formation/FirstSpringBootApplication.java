@@ -33,21 +33,23 @@ IPatientService patientService;
 		//Hopital hopital = new Hopital();
 		//hopital.setIdHopital(4);
 		
-		Medecin medecin = new Medecin();
-		medecin.setIdMedecin(12);
+		//Medecin medecin = new Medecin();
+		//medecin.setIdMedecin(12);
 		//medecin.setNomMedecin("Dumas");
 		//medecin.setPrenomMedecin("Laurent");
 		//medecin.setSpecialite("Gynechologue");
 		//medecin.setHopital(hopital);
 		//medecinService.deleteMedecin(11);
 		
-		Patient patient=new Patient();
-		patient.setNomPatient("Maurel");
-		patient.setPrenomPatient("Camille");
-		patient.setMaladie("Accouchement");
-		patient.setIdPatient(15);
-		patient.setMedecin(medecin);
-		patientService.createPatient(patient);
+		//Patient patient=new Patient();
+	//	patient.setNomPatient("Maurel");
+		//patient.setPrenomPatient("Camille");
+	//	patient.setMaladie("Accouchement");
+		//patient.setIdPatient(15);
+		//patient.setMedecin(medecin);
+		//patientService.createPatient(patient);
+		
+		
 		
 		
 	}

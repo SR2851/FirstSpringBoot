@@ -24,9 +24,9 @@ public class HopitalService implements IHopitalService{
 	}
 
 	@Override
-	public int createHopital(Hopital hopital) {
-		hopitalRepository.save(hopital);
-		return 1;
+	public Hopital createHopital(Hopital hopital) {
+		return hopitalRepository.save(hopital);
+		 
 	}
 
 	@Override
@@ -50,6 +50,12 @@ try {
 	return false;                 
 }       
 		
+	}
+
+	@Override
+	public Hopital updateHopital(Hopital hopital) {
+		// TODO Auto-generated method stub
+		return hopitalRepository.save(hopital);
 	}
 
 	
