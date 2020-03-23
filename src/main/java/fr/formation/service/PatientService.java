@@ -20,9 +20,9 @@ public class PatientService implements IPatientService {
 	}
 
 	@Override
-	public int createPatient(Patient patient) {
-		patientRepository.save(patient);
-		return 1;
+	public Patient createPatient(Patient patient) {
+		return patientRepository.save(patient);
+		
 	}
 
 	@Override
@@ -42,6 +42,18 @@ public class PatientService implements IPatientService {
 			e.printStackTrace();
 			return false;
 		}
+	}
+
+	@Override
+	public Patient updatePatient(Patient patient) {
+		// TODO Auto-generated method stub
+		return patientRepository.save(patient);
+	}
+
+	@Override
+	public Patient medPatient(Patient patient) {
+		// TODO Auto-generated method stub
+		return patientRepository.save(patient);
 	}
 
 	

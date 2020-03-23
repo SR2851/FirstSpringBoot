@@ -6,12 +6,15 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import fr.formation.model.Hopital;
 import fr.formation.model.Medecin;
+import fr.formation.repository.IHopitalRepository;
 import fr.formation.repository.IMedecinRepository;
 @Service
 public class MedecinService implements IMedecinService {
 @Autowired
 	IMedecinRepository medecinRepository;
+
 	
 	@Override
 	public List<Medecin> getMedecins() {
@@ -20,9 +23,9 @@ public class MedecinService implements IMedecinService {
 	}
 
 	@Override
-	public int createMedecin(Medecin medecin) {
-		medecinRepository.save(medecin);
-		return 1;
+	public Medecin createMedecin(Medecin medecin) {
+		return medecinRepository.save(medecin);
+		
 	}
 
 	@Override
@@ -44,6 +47,19 @@ public class MedecinService implements IMedecinService {
 			return false;
 		}
 		
+	}
+
+
+	@Override
+	public Medecin updateMedecin(Medecin medecin) {
+		// TODO Auto-generated method stub
+		return medecinRepository.save(medecin);
+	}
+
+	@Override
+	public Medecin medHopital(Medecin medecin) {
+		
+		return medecinRepository.save(medecin);
 	}
 
 	
